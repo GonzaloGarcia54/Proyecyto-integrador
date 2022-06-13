@@ -1,0 +1,697 @@
+* {
+  font-weight: normal;
+}
+
+body {
+  font-family: "DM Sans";
+  scroll-behavior: smooth;
+  width: auto;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  align-content: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 12px;
+  color: white;
+}
+
+.lista-nav a {
+  color: black;
+}
+
+/* MODAL */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtn {
+  width: 110px;
+  height: 22px;
+  background-color: #5227cc;
+  border-radius: 12px;
+  color: white;
+  border: #5227cc;
+}
+a .btn-interno-modal {
+  width: 110px;
+  height: 22px;
+  background-color: #5227cc;
+  border-radius: 12px;
+  color: white;
+  border: #5227cc;
+  padding: 5px 5px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.btn-interno-modal {
+  width: 110px;
+  height: 22px;
+  background-color: #5227cc;
+  border-radius: 12px;
+  color: white;
+  border: #5227cc;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+/* //////// */
+
+.contenedor {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 6fr 5fr 6fr 5fr 2fr;
+
+  grid-template-areas:
+    "nav nav nav nav"
+    "section section section section"
+    "oficina voluntariado"
+    "article1 article1 article1 article1"
+    "carrousel carrousel carrousel carrousel"
+    "contacto contacto contacto contacto"
+    "footer footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+  width: auto;
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  gap: 200px;
+}
+
+.lista-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 80px;
+  list-style: none;
+  font-size: 12px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-weight: bold;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+/* ///////////////////// */
+
+.boton-nav.input {
+  width: 30px;
+  height: 16px;
+  background-color: blueviolet;
+}
+
+#nosotros {
+  grid-area: section;
+  height: 100%;
+  height: 100%;
+  padding: 120px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/Materiales/manos.jpg);
+  align-items: center;
+  background-size: cover;
+}
+
+.nosotros-centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+main {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  background-color: #1c78fd;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* ==================================================================================================== */
+  display: flex;
+  flex-wrap: wrap;
+  /* =========================================================================================================== */
+}
+
+main h2 {
+  color: white;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+main img {
+  margin-bottom: 35px;
+  height: auto;
+}
+
+#oficina {
+  grid-area: oficina;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  gap: 10px;
+  margin-top: 0;
+}
+.voluntariado {
+  grid-area: voluntariado;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.img-oficina-voluntariado {
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+
+.voluntariado {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  gap: 10px;
+  margin-top: 75px;
+  margin-bottom: 10px;
+}
+
+.imagen-abajo {
+  margin-top: 35px;
+  background-size: cover;
+  background-position: center;
+}
+
+#article1 {
+  grid-area: article1;
+  height: 100%;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.titulo-article p {
+  text-align: center;
+  color: black;
+}
+
+.titulo-article h2 {
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.fotos-colores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foto1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  background-color: #dc3545;
+}
+
+.foto2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  background-color: #ff9c07;
+}
+
+.foto3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  background-color: #28a745;
+}
+
+.foto4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  background-color: #17a2b8;
+}
+
+.manos-mas {
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.ser-voluntario h2 {
+  margin: 0;
+  color: white;
+  margin-bottom: 25px;
+  padding: 30px;
+}
+
+.carrousel {
+  grid-area: carrousel;
+  height: 100%;
+  background-color: #1c78fd;
+  margin: 0;
+  text-align: center;
+}
+
+.carrousel h1 {
+  color: white;
+  margin: 0;
+}
+
+.carrousel p {
+  margin-bottom: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  -webkit-box-shadow: 0 0px 4px #777, 0 0 20px #ccc inset;
+  -moz-box-shadow: 0 0px 4px #777, 0 0 20px #ccc inset;
+  box-shadow: 0 0px 4px #777, 0 0 20px #ccc inset;
+}
+
+.carrousel {
+  width: 70%;
+  max-width: 120em;
+  background-color: #5297ff00;
+  overflow: hidden;
+}
+
+.carrousel .grande {
+  width: 300%;
+  background-color: rgba(255, 166, 0, 0);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  transform: translateX(0%);
+}
+
+.carrousel .noticias {
+  width: calc(100% / 2);
+  min-height: 30vh;
+  background-color: #5297ff00;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.noticia {
+  background-color: white;
+  margin-top: 20px;
+}
+
+.carrousel .puntos {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-right: 2.8em;
+}
+
+.carrousel .punto {
+  width: 1em;
+  height: 1em;
+  background-color: #8c970245;
+  margin: 0.2em;
+  list-style: none;
+  border-radius: 50%;
+}
+
+.carrousel .punto.activo {
+  background-color: rgba(255, 0, 0, 0.39);
+}
+
+/* CONTACTO  */
+
+#contacto {
+  grid-area: contacto;
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: center;
+}
+
+.aNosotros {
+  color: white;
+  text-decoration: none;
+}
+.aNosotros:hover {
+  text-decoration: underline;
+}
+
+#formulario-inferior {
+  display: flex;
+}
+
+.mensaje {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+label {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.input-largo {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.input-largo-msj {
+  width: 200px;
+  height: 105px;
+}
+
+.boton-centro {
+  text-align: center;
+}
+
+.nombre-correo {
+  display: flex;
+  flex-direction: column;
+}
+
+#section-image {
+  grid-area: section-image;
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  margin-top: 70px;
+  margin-bottom: 140px;
+}
+
+#contacto-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 45px;
+  margin-left: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-form {
+  background-color: #5227cc;
+  border-radius: 12px;
+  width: 80px;
+  height: 22px;
+  color: white;
+  border: #5227cc;
+  margin: 20px;
+}
+
+/* /////////////// */
+footer {
+  grid-area: footer;
+  height: 100%;
+  background-color: #5227cc;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer-superior {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: white;
+  border-top: 3px solid gray;
+  border-bottom: 3px solid gray;
+}
+
+.footer-inferior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-inferior p {
+  color: gray;
+}
+
+.logo-lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 22px;
+  gap: 20px;
+}
+
+/*////////////////////////////   INICIO MEDIACUERI  /////////////////////////////////// -->
+margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "header"
+      "sec2"
+      "contacto"
+      "footer";
+    grid-template-rows: 0.15fr 0.4fr 2fr 1fr 0.15fr;
+    grid-template-columns: 100%;
+
+/*  */
+
+@media only screen and (max-width: 390px) {
+  .body {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    flex-direction: column;
+  }
+
+  .contenedor {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 5fr 6fr 5fr 6fr 5fr 2fr;
+    grid-template-areas:
+      "nav"
+      "nosotros"
+      "oficina"
+      "voluntariado"
+      "article1"
+      "carrousel"
+      "contacto"
+      "footer";
+  }
+
+  nav {
+    grid-area: nav;
+  }
+  .container {
+    display: none;
+  }
+  #nosotros {
+    display: none;
+  }
+
+  nav ul {
+    display: none;
+  }
+  #nosotros {
+    grid-area: section;
+    height: 100%;
+    height: 100%;
+    padding: 120px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(/Materiales/manos.jpg);
+    align-items: center;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    text-align: center;
+  }
+
+  #nosotros p {
+    display: none;
+  }
+
+  #oficina {
+    grid-area: oficina;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    margin-top: 0;
+  }
+  .voluntariado {
+    grid-area: voluntariado;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    margin-top: 0;
+  }
+  .carrousel {
+    grid-area: carrousel;
+    height: 100vh;
+    background-color: #1c78fd;
+    margin: 0;
+    text-align: center;
+  }
+
+  #contacto {
+    grid-area: contacto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #section-imagen {
+    display: none;
+  }
+  #contacto-form {
+    width: 100%;
+  }
+  #formulario-inferior {
+    display: flex;
+    flex-direction: column;
+  }
+  footer ul {
+    display: none;
+  }
+  #redes {
+    display: none;
+  }
+  #footer-superior {
+    grid-area: footer;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer-superior img {
+    margin-right: 15%;
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 390px;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  .modal p {
+    display: none;
+  }
+  .modal h3 {
+    font-size: small;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+  }
+}
+/* display: flex;
+flex-wrap: wrap;
+ */
